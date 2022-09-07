@@ -1,0 +1,25 @@
+Complete 'load_case.py' with below requirement:
+
+1. The output should be generate a new dict structure as following
+2. PLEASE NOTE:
+    - GPU number is integer from 1 to 8, your code should ignore other invalid scenario.
+    - In original case structure, those commands have some redundant space, your code should format them to single space.
+
+Notes:
+a. The main part has been completed, you need implement the main functions: load_case_by_gpu().
+b. Refer to the function docstrings in the source file.
+
+Example:
+Run: python load_case.py
+In orig_cases dict structure, you will find valid GPU number '3', '4' by '-gpu 3', '-gpu 4', so it will be transferred to new dict format:
+{
+  "3": [
+    {"exe": "test_bin -a -b -gpu 3 -d -e", "timeout": 10},
+    {"exe": "test_bin -b -gpu 3 -d -e", "timeout": 20}
+  ],
+  "4": [
+    {"exe": "test_bin -a -c -gpu 4 -d", "timeout": 30}
+  ]
+}
+
+

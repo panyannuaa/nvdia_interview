@@ -1,0 +1,15 @@
+Write a shell script to print out the debug summary for current machine. 
+
+Criterias to meet:
+1. Save all results to one destination file under current folder 
+        a. The user can pass the specific filename in cmdline
+        b. By default the script will save the output to result.txt, if filename is not given.
+2. Add current directory into PATH environment, then include PATH environment value in the output file.
+3. Search all warning messages in nvidia-installer.log, then include those messages in the output file.
+4. The output file should include last 5 lines of nvidia-installer.log
+5. Try to ping 127.0.0.1 and 128.0.1.2 in your script:
+      a. Check if each IP address is available, save result in output file with “ok” or “not ok”, for example:
+           127.0.0.1 - ok
+           128.0.1.2 - not ok
+      b. Avoid extra outputs in terminal 
+
